@@ -39,6 +39,7 @@ data().then((data)=>{
    
    const card = document.createElement('div')
    card.className = "card"
+   
    card.innerHTML = ` <img src="${data.picture.large}" alt="">
        <h1> ${data.name.title} ${data.name.first} ${data.name.last} </h1> 
        <p> ${data.email} </p>
@@ -51,11 +52,10 @@ data().then((data)=>{
 
        </div> 
 
-     
-
+       
    `
-    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
-     card.style.backgroundColor = randomColor
+   let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
+   card.style.backgroundColor = randomColor
      
    container.appendChild(card)
   }) 
